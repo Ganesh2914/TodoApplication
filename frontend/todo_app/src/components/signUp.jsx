@@ -55,6 +55,7 @@ function SignUp() {
 
                         if(data.success){
                             localStorage.setItem("token",data.token )
+                            localStorage.setItem("userId",data.userId)
                             navigate("/home");
                         } 
                     }}>

@@ -24,7 +24,7 @@ function useDataFetch(){
           setTodos(todosFetch.todos);
         })
         .catch((error) => console.error("Error fetching todos:", error));
-      },5000)
+      },10000)
       fetch("http://localhost:3000/todos",{
         headers:{
           userId:localStorage.getItem("userId"),
