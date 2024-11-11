@@ -27,7 +27,7 @@ export default function Appbar() {
             </div>
         </div>
         <div className="m-10  flex justify-center items-center ">
-            <img className=" object-cover h-70 w-90  rounded-2xl" src="src\assets\cover-1.png" alt="image description" />
+            <img className=" object-cover h-70 w-90  rounded-2xl" src="/cover-1.png" alt="image description" />
         </div>
     </>
 }
