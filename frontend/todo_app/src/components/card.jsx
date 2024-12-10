@@ -24,7 +24,7 @@ export default function CustomCard({ todos }) {
 
                         if (!todo.completed) {
                             try {
-                                const response = await fetch(`http://localhost:3000/todo/completed/${todo._id}`, {
+                                const response = await fetch(`http://localhost:3001/todo/completed/${todo._id}`, {
                                     method: "PUT",
                                     headers: {
                                         "Content-Type": "application/json"
@@ -44,7 +44,7 @@ export default function CustomCard({ todos }) {
 
                         } else {
                             try {
-                                const response = await fetch(`http://localhost:3000/todo/Uncomplete/${todo._id}`, {
+                                const response = await fetch(`http://localhost:3001/todo/Uncomplete/${todo._id}`, {
                                     method: "PUT",
                                     headers: {
                                         "Content-Type": "application/json"
@@ -67,7 +67,7 @@ export default function CustomCard({ todos }) {
                         {todo.completed ? "Completed":"Complete"}
                     </button>
                     <button className="m-4 mr-10 bg-[white]  hover:bg-red-900 rounded-lg text-red-500 font-medium py-2 px-4 rounded" onClick={async () => {
-                        const response = await fetch(`http://localhost:3000/todo/delete/${todo._id}`, {
+                        const response = await fetch(`http://localhost:3001/todo/delete/${todo._id}`, {
                             method: "DELETE",
                             headers: {
                                 "Content-Type": "application/json"

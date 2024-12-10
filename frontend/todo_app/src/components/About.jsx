@@ -8,7 +8,7 @@ export default function About() {
     const [newEmail, setNewEmail] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:3000/user/info", {
+        fetch("http://localhost:3001/user/info", {
             headers: {
                 "Content-Type": "application/json",
                 "userid": localStorage.getItem("userId")
@@ -21,7 +21,7 @@ export default function About() {
         })
     }, [])
     function updateInfo() {
-        fetch("http://localhost:3000/user/infoupdate", {
+        fetch("http://localhost:3001/user/infoupdate", {
             method: "PUT",
             body: JSON.stringify({
                 username: newUsername,
@@ -35,7 +35,7 @@ export default function About() {
             let data = await res.json();
             if (data.success) {
                 alert("User info updated successfully")
-                fetch("http://localhost:3000/user/info", {
+                fetch("http://localhost:3001/user/info", {
                     headers: {
                         "Content-Type": "application/json",
                         "userid": localStorage.getItem("userId")

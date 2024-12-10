@@ -39,7 +39,7 @@ function SignUp() {
                         }} />
                     </div>
                     <button className="ml-3 mr-2 bg-[#d7a43b]  hover:bg-yellow-700 rounded-lg text-white font-medium py-1 px-4 rounded" onClick={async ()=>{
-                        let response= await fetch("http://localhost:3000/todos/signup",{
+                        let response= await fetch("http://localhost:3001/todos/signup",{
                             method:"POST",
                             body:JSON.stringify({
                                 username:username,

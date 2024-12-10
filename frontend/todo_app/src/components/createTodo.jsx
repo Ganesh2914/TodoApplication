@@ -12,7 +12,7 @@ function useDataFetch(){
   useEffect(() => {
     // Fix the fetch URL to use "http" instead of "https"
       let value=setInterval(()=>{
-        fetch("http://localhost:3000/todos",{
+        fetch("http://localhost:3001/todos",{
           headers:{
             userId:localStorage.getItem("userId"),
             "Content-Type": "application/json"
@@ -25,7 +25,7 @@ function useDataFetch(){
         })
         .catch((error) => console.error("Error fetching todos:", error));
       },10000)
-      fetch("http://localhost:3000/todos",{
+      fetch("http://localhost:3001/todos",{
         headers:{
           userId:localStorage.getItem("userId"),
           "Content-Type": "application/json"
@@ -81,7 +81,7 @@ function RenderingLogic({todos}){
       <div>
         <button onClick={async () => { 
 
-           let response= await fetch("http://localhost:3000/todo",{
+           let response= await fetch("http://localhost:3001/todo",{
               method:"POST",
               body:JSON.stringify({
                  userId:localStorage.getItem("userId"),

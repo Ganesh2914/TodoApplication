@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { createTodo, updateTodo, createUser, deleteTodo } = require('./zod');
 const { key } = require('./secretKey');
 let app = express();
-let port = process.env.PORT || 3000
+let port = process.env.PORT || 3001
 app.use(express.json());
 app.use(cors());
  
